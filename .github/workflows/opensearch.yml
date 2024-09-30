@@ -61,7 +61,7 @@ jobs:
           file: ./opensearch/Dockerfile
           build-args: ${{ matrix.image.build-args }}
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ghcr.io/netlogix/docker/opensearch:${{ matrix.image.version }}
+          tags: ghcr.io/meggernet/docker/opensearch:${{ matrix.image.version }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha, scope=${{ github.workflow }}-opensearch
           cache-to: type=gha, scope=${{ github.workflow }}-opensearch, mode=max
