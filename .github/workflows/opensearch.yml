@@ -4,9 +4,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  packages: write
+
 on:
   schedule:
-    - cron: 0 7 * * THU
+    - cron: 0 18 * * SAT
   push:
     branches:
       - main
