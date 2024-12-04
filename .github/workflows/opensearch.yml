@@ -30,7 +30,7 @@ jobs:
     name: 'Build opensearch-${{ matrix.image.version }} docker image'
     runs-on: ubuntu-latest
     env:
-      imageRegistry: ghcr.io/netlogix/docker/opensearch
+      imageRegistry: ghcr.io/meggernet/docker/opensearch
 
     strategy:
       fail-fast: false
