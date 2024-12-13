@@ -4,9 +4,12 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+permissions:
+  packages: write
+
 on:
   schedule:
-    - cron: 0 7 * * THU
+    - cron: 0 18 * * SAT
   push:
     branches:
       - main
@@ -55,8 +58,7 @@ jobs:
           target: imgproxy
           file: ./imgproxy/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ghcr.io/netlogix/docker/imgproxy:latest,ghcr.io/netlogix/docker/imgproxy:${{ steps.docker.outputs.version }}
+          tags: ghcr.io/meggernet/docker/imgproxy:latest,ghcr.io/meggernet/docker/imgproxy:${{ steps.docker.outputs.version }}
           platforms: linux/amd64,linux/arm64
           cache-from: type=gha
           cache-to: type=gha, mode=max
-
