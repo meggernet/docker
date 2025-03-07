@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - php/**
+      - .github/workflows/php.yml
   pull_request:
     branches:
       - main
     paths:
       - php/**
+      - .github/workflows/php.yml
   workflow_dispatch:
     inputs: {}
 
