@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - mailpit/**
+      - .github/workflows/mailpit.yml
   pull_request:
     branches:
       - main
     paths:
       - mailpit/**
+      - .github/workflows/mailpit.yml
   workflow_dispatch:
     inputs: {}
 

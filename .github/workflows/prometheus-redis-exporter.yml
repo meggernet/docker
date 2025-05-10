@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-redis-exporter/**
+      - .github/workflows/prometheus-redis-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-redis-exporter/**
+      - .github/workflows/prometheus-redis-exporter.yml
   workflow_dispatch:
     inputs: {}
 

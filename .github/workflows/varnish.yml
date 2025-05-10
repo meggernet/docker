@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - varnish/**
+      - .github/workflows/varnish.yml
   pull_request:
     branches:
       - main
     paths:
       - varnish/**
+      - .github/workflows/varnish.yml
   workflow_dispatch:
     inputs: {}
 

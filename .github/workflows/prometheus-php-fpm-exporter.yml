@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-php-fpm-exporter/**
+      - .github/workflows/prometheus-php-fpm-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-php-fpm-exporter/**
+      - .github/workflows/prometheus-php-fpm-exporter.yml
   workflow_dispatch:
     inputs: {}
 

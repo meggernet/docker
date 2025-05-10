@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - elasticsearch/**
+      - .github/workflows/elasticsearch.yml
   pull_request:
     branches:
       - main
     paths:
       - elasticsearch/**
+      - .github/workflows/elasticsearch.yml
   workflow_dispatch:
     inputs: {}
 

@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - rabbitmq/**
+      - .github/workflows/rabbitmq.yml
   pull_request:
     branches:
       - main
     paths:
       - rabbitmq/**
+      - .github/workflows/rabbitmq.yml
   workflow_dispatch:
     inputs: {}
 

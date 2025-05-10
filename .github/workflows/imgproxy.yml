@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - imgproxy/**
+      - .github/workflows/imgproxy.yml
   pull_request:
     branches:
       - main
     paths:
       - imgproxy/**
+      - .github/workflows/imgproxy.yml
   workflow_dispatch:
     inputs: {}
 

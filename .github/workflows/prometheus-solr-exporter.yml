@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-solr-exporter/**
+      - .github/workflows/prometheus-solr-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-solr-exporter/**
+      - .github/workflows/prometheus-solr-exporter.yml
   workflow_dispatch:
     inputs: {}
 

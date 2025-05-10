@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - mysql/**
+      - .github/workflows/mysql.yml
   pull_request:
     branches:
       - main
     paths:
       - mysql/**
+      - .github/workflows/mysql.yml
   workflow_dispatch:
     inputs: {}
 

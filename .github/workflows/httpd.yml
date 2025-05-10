@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - httpd/**
+      - .github/workflows/httpd.yml
   pull_request:
     branches:
       - main
     paths:
       - httpd/**
+      - .github/workflows/httpd.yml
   workflow_dispatch:
     inputs: {}
 

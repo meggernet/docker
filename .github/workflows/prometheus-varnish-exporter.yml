@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-varnish-exporter/**
+      - .github/workflows/prometheus-varnish-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-varnish-exporter/**
+      - .github/workflows/prometheus-varnish-exporter.yml
   workflow_dispatch:
     inputs: {}
 
