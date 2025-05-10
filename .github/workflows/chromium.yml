@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - chromium/**
+      - .github/workflows/chromium.yml
   pull_request:
     branches:
       - main
     paths:
       - chromium/**
+      - .github/workflows/chromium.yml
   workflow_dispatch:
     inputs: {}
 

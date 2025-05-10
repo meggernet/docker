@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - mariadb/**
+      - .github/workflows/mariadb.yml
   pull_request:
     branches:
       - main
     paths:
       - mariadb/**
+      - .github/workflows/mariadb.yml
   workflow_dispatch:
     inputs: {}
 

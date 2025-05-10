@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-elasticsearch-exporter/**
+      - .github/workflows/prometheus-elasticsearch-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-elasticsearch-exporter/**
+      - .github/workflows/prometheus-elasticsearch-exporter.yml
   workflow_dispatch:
     inputs: {}
 

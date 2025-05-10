@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - tideways-daemon/**
+      - .github/workflows/tideways-daemon.yml
   pull_request:
     branches:
       - main
     paths:
       - tideways-daemon/**
+      - .github/workflows/tideways-daemon.yml
   workflow_dispatch:
     inputs: {}
 

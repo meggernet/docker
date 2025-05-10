@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-postgres-exporter/**
+      - .github/workflows/prometheus-postgres-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-postgres-exporter/**
+      - .github/workflows/prometheus-postgres-exporter.yml
   workflow_dispatch:
     inputs: {}
 

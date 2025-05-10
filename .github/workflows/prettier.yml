@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prettier/**
+      - .github/workflows/prettier.yml
   pull_request:
     branches:
       - main
     paths:
       - prettier/**
+      - .github/workflows/prettier.yml
   workflow_dispatch:
     inputs: {}
 

@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - redis/**
+      - .github/workflows/redis.yml
   pull_request:
     branches:
       - main
     paths:
       - redis/**
+      - .github/workflows/redis.yml
   workflow_dispatch:
     inputs: {}
 

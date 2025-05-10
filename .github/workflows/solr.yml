@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - solr/**
+      - .github/workflows/solr.yml
   pull_request:
     branches:
       - main
     paths:
       - solr/**
+      - .github/workflows/solr.yml
   workflow_dispatch:
     inputs: {}
 

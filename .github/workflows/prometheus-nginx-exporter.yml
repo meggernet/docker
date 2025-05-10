@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - prometheus-nginx-exporter/**
+      - .github/workflows/prometheus-nginx-exporter.yml
   pull_request:
     branches:
       - main
     paths:
       - prometheus-nginx-exporter/**
+      - .github/workflows/prometheus-nginx-exporter.yml
   workflow_dispatch:
     inputs: {}
 

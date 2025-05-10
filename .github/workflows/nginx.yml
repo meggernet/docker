@@ -15,11 +15,13 @@ on:
       - main
     paths:
       - nginx/**
+      - .github/workflows/nginx.yml
   pull_request:
     branches:
       - main
     paths:
       - nginx/**
+      - .github/workflows/nginx.yml
   workflow_dispatch:
     inputs: {}
 
