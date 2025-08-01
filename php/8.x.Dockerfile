@@ -6,8 +6,9 @@ ARG PHP_VERSION=8.4
 ARG XDEBUG_VERSION=3.4.1
 
 ENV DEBIAN_FRONTEND=noninteractive \
-    TZ=UTC \
-    LANG="C.UTF-8"
+    TZ="Europe/Berlin" \
+    LANG="C.UTF-8" \
+    TERM=xterm-256color
 
 ENV PHP_VERSION=${PHP_VERSION} \
     PHP_MEMORY_LIMIT=128m \
@@ -16,6 +17,7 @@ ENV PHP_VERSION=${PHP_VERSION} \
     PHP_ASSERT=-1 \
     PHP_POST_MAX_SIZE=100M \
     PHP_UPLOAD_MAX_FILESIZE=100M \
+    PHP_MAX_FILE_UPLOADS=30 \
     PHP_OPCACHE_ENABLE_FILE_OVERRIDE=0 \
     PHP_OPCACHE_INTERNED_STRINGS_BUFFER=8 \
     PHP_OPCACHE_MEMORY_CONSUMPTION=128 \
@@ -24,6 +26,11 @@ ENV PHP_VERSION=${PHP_VERSION} \
     PHP_REALPATH_CACHE_TTL=512 \
     PHP_XDEBUG_HOST=host.docker.internal \
     PHP_XDEBUG_MODE=off \
+    PHP_FPM_PM_MAX_CHILDREN=10 \
+    PHP_FPM_PM_START_SERVERS=3 \
+    PHP_FPM_PM_MIN_SPARE_SERVERS=2 \
+    PHP_FPM_PM_MAX_SPARE_SERVERS=4 \
+    PHP_FPM_PM_MAX_REQUESTS=1000 \
     XDEBUG_VERSION=${XDEBUG_VERSION} \
     TIDEWAYS_APIKEY="" \
     TIDEWAYS_DAEMON="tcp://tideways-daemon:9135" \
@@ -118,7 +125,8 @@ COPY config/fpm/pool.d /etc/php/${PHP_VERSION}/fpm/pool.d/
 COPY config/fpm-${PHP_VERSION}/pool.d /etc/php/${PHP_VERSION}/fpm/pool.d/
 
 # Config files
-COPY dev/bash /root/
+COPY config/bash /root/
+COPY config/bash/.bashrc /etc/bash.bashrc
 
 # Test php-fpm config and php info
 RUN php-fpm -tt
@@ -175,7 +183,6 @@ ENV PHP_ASSERT=1 \
     COMPOSER_CACHE_DIR=/.cache/composer/ \
     YARN_CACHE_FOLDER=/.cache/yarn/ \
     npm_config_cache=/.cache/npm/ \
-    TERM=xterm-256color \
     TIDEWAYS_DAEMON=""
 
 # enable debugging with PhpStorm
